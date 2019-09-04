@@ -1,12 +1,12 @@
 <template>
   <div id="game">
-    <v-container>
+    <v-container class="time-turns">
       <v-row no-gutters>
         <v-col>
-          <v-card class="text-center pa-2" outlined tile>Time: {{ time }}</v-card>
+          <v-card class="time-info text-center pa-2" outlined tile>Time: {{ time }}</v-card>
         </v-col>
         <v-col>
-          <v-card class="text-center pa-2" outlined tile>Turns: {{ turns }}</v-card>
+          <v-card class="turns-info text-center pa-2" outlined tile>Turns: {{ turns }}</v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -17,7 +17,8 @@
           :key="i"
           class="card"
           :class="{ flipped: card.flipped, found: card.found }"
-          @click="flipCard(card)">
+          @click="flipCard(card)"
+        >
           <v-card class="pa-2" height="130" width="250" :style="{ maxWidth: '80px'}">
             <div class="back"></div>
             <div
@@ -377,5 +378,18 @@ export default {
   border: 1px solid #555;
   color: White;
   font-size: 1.4em;
+}
+.time-turns {
+  width: 50%;
+}
+.turns-info {
+  background-color: dimgray !important;
+  color: white !important;
+  border-radius: 100px !important;
+}
+.time-info {
+  background-color: dimgray !important;
+  color: white !important;
+  border-radius: 100px !important;
 }
 </style>

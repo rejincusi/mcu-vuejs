@@ -11,7 +11,10 @@
           <img src="https://github.com/rejincusi/mcu/blob/master/images/avengers-logo.png?raw=true">
         </v-avatar>
       </template>
-      <v-card :color="item.color" dark>
+      <template slot="opposite">
+          <img :src="item.sideImg" height="300">
+      </template>
+      <v-card :elevation="6" :color="item.color" dark>
         <v-card-title class="title">{{ item.title }}</v-card-title>
         <v-card-text class="white text--primary">
           <v-container fluid>
@@ -52,8 +55,8 @@ export default {
     items: [
       {
         id: 1,
-        color: "red lighten-2",
-        icon: "mdi-star",
+        color: "red darken-3",
+        sideImg: "http://i.imgur.com/Mdnai7S.png",
         title: "Captain America: First Avenger",
         year: "2011",
         description:
@@ -64,8 +67,8 @@ export default {
       },
       {
         id: 2,
-        color: "purple darken-1",
-        icon: "mdi-book-variant",
+        color: "red darken-3",
+        sideImg: "https://vignette.wikia.nocookie.net/ffmcu/images/e/ee/Captain_marvel_transparent_by_asthonx1-dcncwke.png/revision/latest?cb=20181030233026",
         title: "Captain Marvel",
         year: "2019",
         description:
@@ -76,8 +79,8 @@ export default {
       },
       {
         id: 3,
-        color: "green lighten-1",
-        icon: "mdi-airballoon",
+        color: "red darken-3",
+        sideImg: "http://www.pngall.com/wp-content/uploads/2016/05/Iron-Man-PNG-File.png",
         title: "Iron Man",
         year: "2008",
         description:
@@ -88,8 +91,8 @@ export default {
       },
       {
         id: 4,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://vignette.wikia.nocookie.net/disney/images/a/a1/IronPatriot-IM3.png/revision/latest?cb=20131111224552",
         title: "Iron Man 2",
         year: "2010",
         description:
@@ -100,8 +103,8 @@ export default {
       },
       {
         id: 5,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://pngmafia.net/image/2019/01/Thor-14-min.png",
         title: "Thor",
         year: "2011",
         description:
@@ -112,8 +115,8 @@ export default {
       },
       {
         id: 6,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://miro.medium.com/max/2538/1*sR7-iqYeA7Q4PsNzcOENKA.png",
         title: "The Incredible Hulk",
         year: "2008",
         description:
@@ -124,8 +127,8 @@ export default {
       },
       {
         id: 7,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://www.pngkey.com/png/full/7-79032_avengers-movie-png-avengers-clint-barton-hawkeye-cosplay.png",
         title: "The Avengers",
         year: "2012",
         description:
@@ -136,7 +139,7 @@ export default {
       },
       {
         id: 8,
-        color: "purple darken-1",
+        color: "red darken-3",
         icon: "mdi-book-variant",
         title: "Iron Man 3",
         year: "2013",
@@ -148,8 +151,8 @@ export default {
       },
       {
         id: 9,
-        color: "green lighten-1",
-        icon: "mdi-airballoon",
+        color: "red darken-3",
+        sideImg: "https://pngriver.com/wp-content/uploads/2018/03/Download-Captain-America-PNG-HD-For-Designing-Projects.png",
         title: "Captain America: The Winter Soldier",
         year: "2014",
         description:
@@ -160,8 +163,8 @@ export default {
       },
       {
         id: 10,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "http://pngriver.com/wp-content/uploads/2018/04/Download-Loki-Transparent-Background.png",
         title: "Thor: The Dark World",
         year: "2013",
         description:
@@ -172,8 +175,8 @@ export default {
       },
       {
         id: 11,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://i.imgur.com/kiE9apB.png",
         title: "Guardian of the Galaxy",
         year: "2014",
         description:
@@ -184,8 +187,8 @@ export default {
       },
       {
         id: 12,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "http://www.pngall.com/wp-content/uploads/2016/04/Avengers-Free-Download-PNG.png",
         title: "The Avengers: Age of Ultron",
         year: "2014",
         description:
@@ -196,8 +199,8 @@ export default {
       },
       {
         id: 13,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/627fe721-846f-4f75-ac61-111ca00b27dd/dd7hpzv-6c7540d3-7e76-4764-a1c0-b6822bc9fa53.png/v1/fill/w_840,h_951,strp/ant_man__avengers_end_game__render__by_alanmac95_dd7hpzv-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzYyN2ZlNzIxLTg0NmYtNGY3NS1hYzYxLTExMWNhMDBiMjdkZFwvZGQ3aHB6di02Yzc1NDBkMy03ZTc2LTQ3NjQtYTFjMC1iNjgyMmJjOWZhNTMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sqVCIaI_3U0LmhiJ4eBpVkn2dDIT7uY9y0BTGBwsIag",
         title: "Ant-Man",
         year: "2015",
         description:
@@ -208,8 +211,8 @@ export default {
       },
       {
         id: 14,
-        color: "purple darken-1",
-        icon: "mdi-book-variant",
+        color: "red darken-3",
+        sideImg: "https://www.stickpng.com/assets/images/58ee7eb83545163ec1942cb2.png",
         title: "Guardians of the Galaxy Vol.2",
         year: "2017",
         description:
@@ -220,8 +223,8 @@ export default {
       },
       {
         id: 15,
-        color: "green lighten-1",
-        icon: "mdi-airballoon",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/05f9f8db-209f-47e0-92f4-a4745ab958d3/dcn9h33-43d721cc-3d9f-4943-83d3-22b8ef1b4f09.png/v1/fill/w_1024,h_504,strp/cap_vs_iron_man_by_gyaldhart_dcn9h33-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTA0IiwicGF0aCI6IlwvZlwvMDVmOWY4ZGItMjA5Zi00N2UwLTkyZjQtYTQ3NDVhYjk1OGQzXC9kY245aDMzLTQzZDcyMWNjLTNkOWYtNDk0My04M2QzLTIyYjhlZjFiNGYwOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.v7LkqI6cuLNpQ2cyIaW4ot_9dc5exDyBQHo_Lm5svOk",
         title: "Captain America: Civil War",
         year: "2016",
         description:
@@ -232,8 +235,8 @@ export default {
       },
       {
         id: 16,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0b4f571b-021b-4e83-9679-eb8c5bf8036d/dce767e-d11ec004-52c9-4df3-80fe-3e5a3da21540.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBiNGY1NzFiLTAyMWItNGU4My05Njc5LWViOGM1YmY4MDM2ZFwvZGNlNzY3ZS1kMTFlYzAwNC01MmM5LTRkZjMtODBmZS0zZTVhM2RhMjE1NDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Zjr20mqg6KX0fZrQL5TcgC5FXveT6Ldfolw9L_XYqsk",
         title: "Doctor Strange",
         year: "2016",
         description:
@@ -244,8 +247,8 @@ export default {
       },
       {
         id: 17,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://i.pinimg.com/originals/c1/4b/89/c14b89bb2f068843485cb2efea28e9ef.png",
         title: "Black Panther",
         year: "2018",
         description:
@@ -256,8 +259,8 @@ export default {
       },
       {
         id: 18,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://www.sccpre.cat/mypng/full/56-567393_there-is-the-images-i-have-used-to.png",
         title: "Spider-Man: Homecoming",
         year: "2017",
         description:
@@ -268,8 +271,8 @@ export default {
       },
       {
         id: 19,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9a145268-41e7-4aa6-93b1-564a57fd6f05/dc3mwo4-d8dfb10f-0219-4006-869a-fbdf6e045c51.png/v1/fill/w_1024,h_728,strp/thor_vs_hulk_by_hz_designs_dc3mwo4-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI4IiwicGF0aCI6IlwvZlwvOWExNDUyNjgtNDFlNy00YWE2LTkzYjEtNTY0YTU3ZmQ2ZjA1XC9kYzNtd280LWQ4ZGZiMTBmLTAyMTktNDAwNi04NjlhLWZiZGY2ZTA0NWM1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.F8m0thaljJ7HADCHcu-8Acq6x3blgJPJ2b1_e7sC1gM",
         title: "Thor: Ragnarok",
         year: "2017",
         description:
@@ -280,8 +283,8 @@ export default {
       },
       {
         id: 20,
-        color: "purple darken-1",
-        icon: "mdi-book-variant",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b8d2b12-21e8-4931-8a6d-fb9ecdd60383/dcc5qo0-d29b49cd-4180-4782-8c1c-dc42400f6d93.png/v1/fill/w_966,h_828,strp/antman_and_the_wasp_hope_van_dyne_png_by_metropolis_hero1125_dcc5qo0-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODQxIiwicGF0aCI6IlwvZlwvNWI4ZDJiMTItMjFlOC00OTMxLThhNmQtZmI5ZWNkZDYwMzgzXC9kY2M1cW8wLWQyOWI0OWNkLTQxODAtNDc4Mi04YzFjLWRjNDI0MDBmNmQ5My5wbmciLCJ3aWR0aCI6Ijw9OTgxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Amn9WlTftwvxEHxIZzERwXHqiM2JT64PDfx-2yuYBO0",
         title: "Ant-Man and the Wasp",
         year: "2018",
         description:
@@ -292,8 +295,8 @@ export default {
       },
       {
         id: 21,
-        color: "green lighten-1",
-        icon: "mdi-airballoon",
+        color: "red darken-3",
+        sideImg: "https://i.pinimg.com/originals/11/0e/1f/110e1fea29a8bccaf168bbf31b66187e.png",
         title: "Avengers: Infinity War",
         year: "2018",
         description:
@@ -304,8 +307,8 @@ export default {
       },
       {
         id: 22,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea196117-0b64-49b7-b13f-79f43cf77e53/dbq9rdt-86ae4595-cc3f-4dee-8b13-c8db1a672e8c.png/v1/fill/w_1204,h_664,strp/infinity_war_team___png_by_captain_kingsman16_dbq9rdt-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTEyNSIsInBhdGgiOiJcL2ZcL2VhMTk2MTE3LTBiNjQtNDliNy1iMTNmLTc5ZjQzY2Y3N2U1M1wvZGJxOXJkdC04NmFlNDU5NS1jYzNmLTRkZWUtOGIxMy1jOGRiMWE2NzJlOGMucG5nIiwid2lkdGgiOiI8PTIwNDEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.iNfbP1IC3kVTloDsVr6GOaNSrdUgoALdefnCBCmqUZ8",
         title: "Avengers: Endgame",
         year: "2019",
         description:
@@ -316,8 +319,8 @@ export default {
       },
       {
         id: 23,
-        color: "indigo",
-        icon: "mdi-buffer",
+        color: "red darken-3",
+        sideImg: "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/a/aa/Spider-Man_FFH_Render.png/revision/latest?cb=20190630145742",
         title: "Spider-Man: Far from home",
         year: "2019",
         description:

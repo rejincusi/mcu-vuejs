@@ -28,6 +28,7 @@
       <router-view />
     </v-content>
 
+      <div :style="{ backgroundImage: 'url(\'' + bg + '\')' }"></div>
     <Footer />
   </v-app>
 </template>
