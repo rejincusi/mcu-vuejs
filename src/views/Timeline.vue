@@ -15,7 +15,7 @@
           <img :src="item.sideImg" height="300">
       </template>
       <v-card :elevation="6" :color="item.color" dark>
-        <v-card-title class="title">{{ item.title }}</v-card-title>
+        <v-card-title class="title">{{ item.title }} ({{ item.year }})</v-card-title>
         <v-card-text class="white text--primary">
           <v-container fluid>
             <v-row>
@@ -140,7 +140,7 @@ export default {
       {
         id: 8,
         color: "red darken-3",
-        icon: "mdi-book-variant",
+        sideImg: "http://www.jsi-dev.com/samples/im3/images/couple.png",
         title: "Iron Man 3",
         year: "2013",
         description:
@@ -296,7 +296,7 @@ export default {
       {
         id: 21,
         color: "red darken-3",
-        sideImg: "https://i.pinimg.com/originals/11/0e/1f/110e1fea29a8bccaf168bbf31b66187e.png",
+        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea196117-0b64-49b7-b13f-79f43cf77e53/dbq9rdt-86ae4595-cc3f-4dee-8b13-c8db1a672e8c.png/v1/fill/w_1204,h_664,strp/infinity_war_team___png_by_captain_kingsman16_dbq9rdt-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTEyNSIsInBhdGgiOiJcL2ZcL2VhMTk2MTE3LTBiNjQtNDliNy1iMTNmLTc5ZjQzY2Y3N2U1M1wvZGJxOXJkdC04NmFlNDU5NS1jYzNmLTRkZWUtOGIxMy1jOGRiMWE2NzJlOGMucG5nIiwid2lkdGgiOiI8PTIwNDEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.iNfbP1IC3kVTloDsVr6GOaNSrdUgoALdefnCBCmqUZ8",
         title: "Avengers: Infinity War",
         year: "2018",
         description:
@@ -308,7 +308,7 @@ export default {
       {
         id: 22,
         color: "red darken-3",
-        sideImg: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea196117-0b64-49b7-b13f-79f43cf77e53/dbq9rdt-86ae4595-cc3f-4dee-8b13-c8db1a672e8c.png/v1/fill/w_1204,h_664,strp/infinity_war_team___png_by_captain_kingsman16_dbq9rdt-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTEyNSIsInBhdGgiOiJcL2ZcL2VhMTk2MTE3LTBiNjQtNDliNy1iMTNmLTc5ZjQzY2Y3N2U1M1wvZGJxOXJkdC04NmFlNDU5NS1jYzNmLTRkZWUtOGIxMy1jOGRiMWE2NzJlOGMucG5nIiwid2lkdGgiOiI8PTIwNDEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.iNfbP1IC3kVTloDsVr6GOaNSrdUgoALdefnCBCmqUZ8",
+        sideImg: "https://www.nsbpictures.com/wp-content/uploads/2019/04/avengers-png.png",
         title: "Avengers: Endgame",
         year: "2019",
         description:

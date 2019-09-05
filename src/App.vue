@@ -3,10 +3,7 @@
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
         <v-avatar @click="$router.push('/')">
-          <img
-            src="http://diskingdom.com/wp-content/uploads/2015/01/Marvel-Logo.jpg"
-            alt="avatar"
-          />
+          <img src="http://diskingdom.com/wp-content/uploads/2015/01/Marvel-Logo.jpg" alt="avatar" />
         </v-avatar>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -19,16 +16,15 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary right>
-      <v-list-item>About</v-list-item>
-      <v-list-item>Timeline</v-list-item>
-      <v-list-item>Games</v-list-item>
+      <v-btn text @click="$router.push('/#about')">About</v-btn>
+      <v-btn text @click="$router.push('/timeline')">Timeline</v-btn>
+      <v-btn text @click="$router.push('/games')">Games</v-btn>
     </v-navigation-drawer>
 
     <v-content>
       <router-view />
     </v-content>
 
-      <div :style="{ backgroundImage: 'url(\'' + bg + '\')' }"></div>
     <Footer />
   </v-app>
 </template>
@@ -50,3 +46,12 @@ export default {
   })
 };
 </script>
+
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+</style>

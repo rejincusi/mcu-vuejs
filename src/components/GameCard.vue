@@ -383,13 +383,15 @@ export default {
   width: 50%;
 }
 .turns-info {
-  background-color: dimgray !important;
+  background-color: #212121 !important;
   color: white !important;
-  border-radius: 100px !important;
+  border-radius: 10px !important;
+  margin: 5px;
 }
 .time-info {
-  background-color: dimgray !important;
+  background-color: #212121 !important;
   color: white !important;
-  border-radius: 100px !important;
+  border-radius: 10px !important;
+  margin: 5px;
 }
 </style>
