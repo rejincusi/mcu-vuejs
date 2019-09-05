@@ -1,4 +1,4 @@
-# hack-a-thon
+# mcu
 
 ## Project setup
 ```
