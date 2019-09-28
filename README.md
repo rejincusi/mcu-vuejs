@@ -11,5 +11,5 @@ https://mcu-vuejs.herokuapp.com/
 
 # Technologies
 
-*VueJS
-*Vuetify
+- VueJS
+- Vuetify
