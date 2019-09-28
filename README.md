@@ -9,3 +9,7 @@ https://mcu-vuejs.herokuapp.com/
 2. "npm install" the dependencies
 3. "npm run serve" to run the client
 
+# Technologies
+
+*VueJS
+*Vuetify
